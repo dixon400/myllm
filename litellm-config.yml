@@ -89,3 +89,11 @@ litellm_settings:
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
+
+# --- MCP Servers ---
+# Quick no-auth MCP for smoke testing (OpenAPI -> MCP conversion)
+mcp_servers:
+  petstore_mcp:
+    url: "https://petstore.swagger.io/v2"
+    spec_path: "https://petstore.swagger.io/v2/swagger.json"
+    auth_type: "none"
