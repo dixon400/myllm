@@ -12,6 +12,38 @@ model_list:
       api_base: http://host.docker.internal:11434
 
 
+  # --- Ollama Cloud (hosted) — open/free-tier models ---
+  - model_name: ollama-cloud-qwen3-next:80b
+    litellm_params:
+      model: ollama/qwen3-next:80b
+      api_base: os.environ/OLLAMA_CLOUD_API_BASE
+      api_key: os.environ/OLLAMA_CLOUD_API_KEY
+
+  - model_name: ollama-cloud-qwen3.5:397b
+    litellm_params:
+      model: ollama/qwen3.5:397b
+      api_base: os.environ/OLLAMA_CLOUD_API_BASE
+      api_key: os.environ/OLLAMA_CLOUD_API_KEY
+
+  - model_name: ollama-cloud-qwen3-coder-next
+    litellm_params:
+      model: ollama/qwen3-coder-next
+      api_base: os.environ/OLLAMA_CLOUD_API_BASE
+      api_key: os.environ/OLLAMA_CLOUD_API_KEY
+
+  - model_name: ollama-cloud-gemma4-31b
+    litellm_params:
+      model: ollama/gemma4:31b
+      api_base: os.environ/OLLAMA_CLOUD_API_BASE
+      api_key: os.environ/OLLAMA_CLOUD_API_KEY
+
+  - model_name: ollama-cloud-mistral
+    litellm_params:
+      model: ollama/mistral:latest
+      api_base: os.environ/OLLAMA_CLOUD_API_BASE
+      api_key: os.environ/OLLAMA_CLOUD_API_KEY
+
+
   # --- Groq — free tier, fast overflow ---
   - model_name: groq-oss-120b
     litellm_params:
